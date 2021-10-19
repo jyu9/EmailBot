@@ -49,7 +49,7 @@ def verify_msg(guildname, domains):
     if domains == "":
         return "{} hasn't setup this bot yet.".format(guildname)
     else: 
-        return "To verify yourself on {}, **reply here with your @{} email address**.".format(guildname, domains)
+        return "To verify yourself on {}, **reply here with your @{} email address**. It doesn't have to be the same email as the one you used to signup for Discord.".format(guildname, domains)
 
 def new_user(userid, guildid, email="", code=0, verified=0):
     c.execute("INSERT INTO users VALUES (?, ?, ?, ?, ?)", (userid, guildid, email, code, verified))
@@ -123,7 +123,7 @@ client = commands.Bot(command_prefix = '.', intents=intents)
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-    await client.change_presence(activity=discord.Game(name='.vstatus | github.com/gg2001/EmailBot'))
+    await client.change_presence(activity=discord.Game(name='.verify'))
 
 @client.event
 async def on_member_join(member):

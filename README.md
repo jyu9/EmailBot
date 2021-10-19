@@ -1,18 +1,3 @@
-<p align="center">
-  <img src="docs/emailbot.png" />
-</p>
-
-**EmailBot** allows you to verify that your Discord server members have an email address with a specific domain.
-
-[![Discord](https://img.shields.io/discord/731028346569228288)](https://discord.gg/MfFMxu9) [![License](https://img.shields.io/badge/license-GPL-brightgreen)](LICENSE)
-
-> Invite: https://discord.com/api/oauth2/authorize?client_id=731027450607435846&permissions=268503040&scope=bot
-
-> Discord server: https://discord.gg/MfFMxu9
-
-## Usage
-
-After [inviting](https://discord.com/api/oauth2/authorize?client_id=731027450607435846&permissions=268503040&scope=bot) the bot to your server, a domain must be added using `.dominadd domain`. `.vstatus` is the help command:
 
 ```
 User commands: 
