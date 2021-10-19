@@ -189,7 +189,7 @@ async def on_message(message):
                     if mailgun_email.status_code == 200:
                         await message.channel.send("Email sent. **Reply here with your verification code**. If you haven't received it, check your spam folder.")
                     else:
-                        await message.channel.send("Email failed to send.")
+                        await message.channel.send("Email failed to send, ." + e)
             else:
                 await message.channel.send("Invalid email.")
         else:
