@@ -1,1 +1,1 @@
-web: python bot.py -p '0.0.0.0:8080'
+web: python bot.py -p $PORT
