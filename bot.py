@@ -281,6 +281,7 @@ async def enableonjoin(ctx):
     if ctx.guild and ctx.author.guild_permissions.administrator:
         check_on_join = get_guild(ctx.guild.id)
         if check_on_join == None:
+            await ctx.send(ctx.guild + "   " + ctx.author.guild_permissions.administrator + "      " + "```Failed enableonjoin```")
             new_guild(ctx.guild.id)
         enable_onjoin(ctx.guild.id)
         await ctx.send("```Verify when a user joins? True```")
