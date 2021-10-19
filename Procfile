@@ -1,1 +1,1 @@
-worker: python bot.py
+web: python bot.py -p '0.0.0.0:8080'
