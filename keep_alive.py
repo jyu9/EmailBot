@@ -1,6 +1,7 @@
 from flask import Flask
 from threading import Thread
 import sqlite3
+import os
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask('')
@@ -26,7 +27,7 @@ sched.add_job(backup_db,'interval',minutes=30)
 sched.start()
 
 def run():
-  app.run(environ.get('PORT'))
+  app.run(os.environ.get('PORT'))
 
 def keep_alive():  
     t = Thread(target=run)
