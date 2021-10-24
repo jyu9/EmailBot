@@ -189,7 +189,7 @@ async def on_message(message):
                     if mailgun_email.status_code == 200:
                         await message.channel.send("Email sent. **Reply here with your verification code**. If you haven't received it, check your spam folder.")
                     else:
-                        await message.channel.send("Email failed to send, ." + e)
+                        await message.channel.send("Email failed to send, ." + repr(e))
             else:
                 await message.channel.send("Invalid email.")
         else:
@@ -220,7 +220,7 @@ async def on_message(message):
                     role = discord.utils.get(curr_guild.roles, name=guild_db[3])
                     member = curr_guild.get_member(message.author.id)
                     await member.add_roles(role)
-                await message.channel.send("You have been verified on " + client.get_guild(i[1]).name + ".")
+                await message.channel.send("You have been verified on " + client.get_guild(i[1]).name + ". Welcome!")
         else:
             await message.channel.send("Incorrect code.")
     elif message.guild == None:
