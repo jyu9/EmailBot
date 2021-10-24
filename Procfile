@@ -1,1 +1,1 @@
-web: python bot.py -p 0.0.0.0:5000
+worker: python bot.py
