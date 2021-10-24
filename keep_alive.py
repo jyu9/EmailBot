@@ -27,7 +27,7 @@ sched.add_job(backup_db,'interval',minutes=30)
 sched.start()
 
 def run():
-  app.run(os.environ.get('PORT'))
+  app.run(host='0.0.0.0', port=os.environ.get('PORT'))
 
 def keep_alive():  
     t = Thread(target=run)
